@@ -25,6 +25,7 @@
 		7655B5D81A61AEDB00A0A4CE /* VOKAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7655B5D61A61AEDB00A0A4CE /* VOKAlertAction.m */; };
 		76C603701A6DA5F000F5701C /* VOKAlertAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C6036E1A6DA5F000F5701C /* VOKAlertAnimationController.h */; };
 		76C603711A6DA5F000F5701C /* VOKAlertAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C6036F1A6DA5F000F5701C /* VOKAlertAnimationController.m */; };
+		76C603741A6DA88F00F5701C /* VOKAlertAnimatingProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C603731A6DA88F00F5701C /* VOKAlertAnimatingProtocol.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		7655B5D61A61AEDB00A0A4CE /* VOKAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOKAlertAction.m; sourceTree = "<group>"; };
 		76C6036E1A6DA5F000F5701C /* VOKAlertAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOKAlertAnimationController.h; sourceTree = "<group>"; };
 		76C6036F1A6DA5F000F5701C /* VOKAlertAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOKAlertAnimationController.m; sourceTree = "<group>"; };
+		76C603731A6DA88F00F5701C /* VOKAlertAnimatingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOKAlertAnimatingProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			children = (
 				76C6036E1A6DA5F000F5701C /* VOKAlertAnimationController.h */,
 				76C6036F1A6DA5F000F5701C /* VOKAlertAnimationController.m */,
+				76C603731A6DA88F00F5701C /* VOKAlertAnimatingProtocol.h */,
 			);
 			name = "Animation Controller";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C603741A6DA88F00F5701C /* VOKAlertAnimatingProtocol.h in Headers */,
 				7655B5D21A61AE8F00A0A4CE /* VOKAlertController.h in Headers */,
 				7655B5D71A61AEDB00A0A4CE /* VOKAlertAction.h in Headers */,
 				7655B5B51A61AE7A00A0A4CE /* VOKAlertControllerFramework.h in Headers */,
