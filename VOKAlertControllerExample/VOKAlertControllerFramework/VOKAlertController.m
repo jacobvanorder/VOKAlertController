@@ -8,6 +8,8 @@
 
 #import "VOKAlertController.h"
 
+#import "VOKAlertAnimationController.h"
+
 @interface VOKInternalTextFieldStorageObject : NSObject
 
 @property (nonatomic) UITextField *textField;
@@ -29,7 +31,7 @@
 
 @end
 
-@interface VOKAlertController () <UITextFieldDelegate>
+@interface VOKAlertController () <UITextFieldDelegate, UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, readwrite) VOKAlertControllerStyle preferredStyle;
 
@@ -39,6 +41,28 @@
 @end
 
 @implementation VOKAlertController
+
+#pragma mark - UIViewcontrollerTransitioningDelegate -
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                   presentingController:(UIViewController *)presenting
+                                                                       sourceController:(UIViewController *)source
+{
+    if (self.optionalAnimationController) {
+        return self.optionalAnimationController;
+    } else {
+        return [VOKAlertAnimationController animationControllerAsBeingPresented:YES];
+    }
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    if (self.optionalAnimationController) {
+        return self.optionalAnimationController;
+    } else {
+        return [VOKAlertAnimationController animationControllerAsBeingPresented:NO];
+    }
+}
 
 #pragma mark - UITextFieldDelegate -
 
@@ -80,10 +104,19 @@
                       message:(NSString *)message
                preferredStyle:(VOKAlertControllerStyle)preferredStyle
 {
-    if (self = [super init]) {
+    if (self = [self initWithNibName:nil bundle:nil]) {
         _title = title;
         _message = message;
         _preferredStyle = preferredStyle;
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        self.modalPresentationStyle = UIModalPresentationCustom;
+        self.transitioningDelegate = self;
     }
     return self;
 }
@@ -103,5 +136,8 @@
     }
     return _textFieldArray;
 }
+
+#pragma mark - View Lifecycle -
+
 
 @end

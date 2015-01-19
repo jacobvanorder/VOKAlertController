@@ -64,4 +64,9 @@ typedef void (^VOKTextFieldHandler)(UITextField *);
 
 @property (nonatomic, readonly) VOKAlertControllerStyle preferredStyle;
 
+/**
+ *  If you'd rather not use the stock animation controller, you may provide one for the alert view to use.
+ */
+@property (nonatomic, strong) id<UIViewControllerAnimatedTransitioning> optionalAnimationController;
+
 @end

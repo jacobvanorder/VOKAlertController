@@ -23,6 +23,8 @@
 		7655B5D31A61AE8F00A0A4CE /* VOKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7655B5D11A61AE8F00A0A4CE /* VOKAlertController.m */; };
 		7655B5D71A61AEDB00A0A4CE /* VOKAlertAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7655B5D51A61AEDB00A0A4CE /* VOKAlertAction.h */; };
 		7655B5D81A61AEDB00A0A4CE /* VOKAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7655B5D61A61AEDB00A0A4CE /* VOKAlertAction.m */; };
+		76C603701A6DA5F000F5701C /* VOKAlertAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C6036E1A6DA5F000F5701C /* VOKAlertAnimationController.h */; };
+		76C603711A6DA5F000F5701C /* VOKAlertAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C6036F1A6DA5F000F5701C /* VOKAlertAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		7655B5D11A61AE8F00A0A4CE /* VOKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOKAlertController.m; sourceTree = "<group>"; };
 		7655B5D51A61AEDB00A0A4CE /* VOKAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOKAlertAction.h; sourceTree = "<group>"; };
 		7655B5D61A61AEDB00A0A4CE /* VOKAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOKAlertAction.m; sourceTree = "<group>"; };
+		76C6036E1A6DA5F000F5701C /* VOKAlertAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOKAlertAnimationController.h; sourceTree = "<group>"; };
+		76C6036F1A6DA5F000F5701C /* VOKAlertAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOKAlertAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,7 @@
 			children = (
 				7655B5B41A61AE7A00A0A4CE /* VOKAlertControllerFramework.h */,
 				7655B5B21A61AE7A00A0A4CE /* Supporting Files */,
+				76C603721A6DA6C400F5701C /* Animation Controller */,
 				7655B5D41A61AE9E00A0A4CE /* Alert Controller */,
 			);
 			path = VOKAlertControllerFramework;
@@ -239,6 +244,15 @@
 			name = "Alert Controller";
 			sourceTree = "<group>";
 		};
+		76C603721A6DA6C400F5701C /* Animation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76C6036E1A6DA5F000F5701C /* VOKAlertAnimationController.h */,
+				76C6036F1A6DA5F000F5701C /* VOKAlertAnimationController.m */,
+			);
+			name = "Animation Controller";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -249,6 +263,7 @@
 				7655B5D21A61AE8F00A0A4CE /* VOKAlertController.h in Headers */,
 				7655B5D71A61AEDB00A0A4CE /* VOKAlertAction.h in Headers */,
 				7655B5B51A61AE7A00A0A4CE /* VOKAlertControllerFramework.h in Headers */,
+				76C603701A6DA5F000F5701C /* VOKAlertAnimationController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C603711A6DA5F000F5701C /* VOKAlertAnimationController.m in Sources */,
 				7655B5D31A61AE8F00A0A4CE /* VOKAlertController.m in Sources */,
 				7655B5D81A61AEDB00A0A4CE /* VOKAlertAction.m in Sources */,
 			);
@@ -731,6 +747,7 @@
 				7655B5CA1A61AE7A00A0A4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7655B5CF1A61AE7A00A0A4CE /* Build configuration list for PBXNativeTarget "VOKAlertControllerFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -739,6 +756,7 @@
 				7655B5CC1A61AE7A00A0A4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
